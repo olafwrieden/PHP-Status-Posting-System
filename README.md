@@ -16,7 +16,7 @@
    $password = "[YOUR_DB_PASSWORD]";
    $dbname = "[YOUR_DB_NAME]";
    ```
-2. Navidate to [searchstatusprocess.php](/searchstatusprocess.php#L39) (Line #39) and replace the database credentials in this file too. **Note:** The assignment did not permit for an additional `settings.php` file to consolidate the database details and `require_once('./settings.php');` where needed.
+2. Navigate to [searchstatusprocess.php](/searchstatusprocess.php#L39) (Line #39) and replace the database credentials in this file too. **Note:** The assignment did not permit for an additional `settings.php` file to consolidate the database details and `require_once('./settings.php');` where needed.
 3. Upload these files to your PHP environment or install a PHP Server extension in your IDE to serve the project locally.
 
 ## Screenshots
@@ -32,3 +32,11 @@
 |     Showing Multiple Results      |      About Screen      |
 | :-------------------------------: | :--------------------: |
 | ![](/images/multiple-results.png) | ![](/images/about.png) |
+
+### Example Rows in Database
+
+![](/images/db-rows.png)
+
+### Table Structure
+
+![](/images/db-structure.png)
