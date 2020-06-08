@@ -14,7 +14,7 @@ A user is warned about duplicate status codes, failed submissions etc. This syst
 
 ### Connecting to a Relational Database
 
-1. Navigate [poststatusprocess.php](/poststatusprocess.php#L79) (Line #79) and replace the database credentials placeholders with your MySQL connection details.
+1. Navigate to [poststatusprocess.php](/poststatusprocess.php#L79) (Line #79) and replace the database credentials placeholders with your MySQL connection details.
    ```php
    // Database Credentials
    $servername = "[YOUR_DB_SERVER_STRING]";
