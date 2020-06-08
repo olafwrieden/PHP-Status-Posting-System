@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>About | Status Posting System</title>
+    <meta name="description" content="Web Development Status Posting System." />
+    <meta name="author" content="Olaf Wrieden" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/skeleton.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <div class="section" style="margin-top: 100px">
+      <div class="container">
+        <h3 class="section-heading">Status Posting System</h3>
+        <hr />
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section">
+      <div class="container">
+        <h4>About</h4>
+        <p>
+          This Status Posting System for a social networking site allows users
+          to post their status and save it to a database table for later search
+          and retrieval.
+        </p>
+
+        <h5>
+          What special features have you done, or attempted, in creating the
+          site that we should know about?
+        </h5>
+        <ul>
+          <li>
+            I added the custom CSS framework
+            <a href="http://getskeleton.com" target="_blank">Skeleton</a> to
+            create a responsive, user-friendly interface. Today, if a web
+            application doesn't work for mobile, it "doesn't work".
+          </li>
+          <li>
+            Buttons have been strategically colored to assist in guiding the
+            user-flow.
+          </li>
+          <li>
+            Tables were used when displaying search results to neatly align
+            status messages.
+          </li>
+          <li>
+            I made the assumption that the email address on the homepage had to
+            be clickable, hence a user can easily create a new email.
+          </li>
+          <li>
+            I made the assumption that the default sharing type is 'Only Me'.
+          </li>
+        </ul>
+        <hr />
+        <h5>Which parts did you have trouble with?</h5>
+        <ul>
+          <li>
+            When implementing the search result table, I noticed that status
+            text would overflow the cell and cause issues when viewing on
+            smaller device screens.
+          </li>
+          <li>
+            While testing against my own hosted database, I was unable to
+            validate if a table with the given name already exists. I then
+            discovered my server hosted a MariaDB database (not MySQL) and hence
+            had a different <code>information_schema</code> structure. Switching
+            to XAMPP during development and testing resolved this issue.
+          </li>
+          <li>
+            I had trouble casting the date into the correct format from input
+            string to PHP <code>date()</code>, to MySQL-accepted YYYY-mm-dd
+            format. After much testing, I learned via the
+            <code>strtotime()</code> function documentation that: "Dates in the
+            m/d/y or d-m-y formats are disambiguated by looking at the separator
+            between the various components: if the separator is a slash (/),
+            then the American m/d/y is assumed; whereas if the separator is a
+            dash (-) or a dot (.), then the European d-m-y format is assumed.
+            If, however, the year is given in a two digit format and the
+            separator is a dash (-), the date string is parsed as y-m-d."
+            (source: https://www.php.net/manual/en/function.strtotime.php)
+          </li>
+        </ul>
+        <hr />
+        <h5>What would you like to do better next time?</h5>
+        <ul>
+          <li>
+            There is room for improvement when it comes to the modularisation of
+            similar page content, such as header and page title, which could be
+            defined in their own functions, and dynamically inserted using
+            <code>require_once()</code> rather than hard-coded in each file.
+            This would allow for changes to be made in one location from where
+            they are then propagated out.
+          </li>
+          <li>
+            I would like to experiment with environment variables in external
+            files rather than hard-coded values in multiple files. Coming from a
+            JavaScript world, the principles of a
+            <a href="https://12factor.net" target="_blank">12-Factor App</a>
+            should be consistently applied across projects.
+          </li>
+          <li>
+            I would like for the sections of this About page to collapse (by
+            heading) into an accordion-like view which can be expanded and
+            collapsed as desired for simpler navigation and mobile-friendliness.
+          </li>
+          <li>
+            Use Parameter Binding when creating the SQL queries.
+          </li>
+        </ul>
+        <hr />
+        <h5>
+          What references/sources you have used to help you learn how to create
+          your website?
+        </h5>
+        <ul>
+          <li>
+            I referred to
+            <a
+              href="https://stackoverflow.com/questions/4997252/get-post-from-multiple-checkboxes"
+              target="_blank"
+            >this question</a>
+            on Stack Overflow to learn how we extract multiple checkboxes from
+            the posted form using
+            <code>$_POST[]</code>.
+          </li>
+          <li>
+            To better understand the database connection component of this
+            system, I frequently referred to the lecture slides.
+          </li>
+          <li>
+            Any PHP unknowns were resolved thanks to the PHP section of
+            <a href="https://www.w3schools.com/php/" target="_blank">W3Scbools</a>.
+          </li>
+        </ul>
+        <hr />
+        <h5>What you have learnt along the way?</h5>
+        <ul>
+          <li>
+            A key learning for me was the MySQL table validation. Previously, I
+            had not paid close attention to validating a table's existence but
+            it is definitely something worth checking, going forward.
+          </li>
+          <li>
+            Despite not being new to the world of HTML, CSS, and PHP, I
+            discovered inefficiencies in maintaining duplicate pieces of code -
+            as outlined under:
+            <i>What would you like to do better next time?</i> - which led me to
+            ask questions around code modularity in PHP.
+          </li>
+          <li>
+            I learnt that MySQL and MariaDB configure their
+            <code>information_schema</code> differently, causing compatibility
+            issues when checking for a given table's existence.
+          </li>
+          <li>
+            I experimented with posting an array of permission checkboxes and
+            creating another table in the database to match posts with
+            permissions via a one-to-many relationship. However, I limited the
+            scope of this project to a single (denormalised) table in the end.
+          </li>
+        </ul>
+
+        <!-- Buttons -->
+        <a class="button" href="index.html">Back to Homepage</a>
+      </div>
+    </div>
+  </body>
+</html>

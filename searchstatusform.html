@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Search | Status Posting System</title>
+    <meta name="description" content="Web Development Status Posting System." />
+    <meta name="author" content="Olaf Wrieden" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/skeleton.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <div class="section" style="margin-top: 100px">
+      <div class="container">
+        <h3 class="section-heading">Status Posting System</h3>
+        <hr />
+      </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="section">
+      <div class="container">
+        <form action="searchstatusprocess.php" method="GET">
+          <div class="row">
+            <div class="eight columns">
+              <label for="statusSearch">Status</label>
+              <input
+                class="u-full-width"
+                type="text"
+                placeholder="Some status"
+                name="search"
+                id="statusSearch"
+                pattern="^[a-zA-Z0-9,.!? ]*$"
+                required
+              />
+
+              <!-- Buttons -->
+              <button
+                class="button button-primary"
+                type="submit"
+                value="Search"
+              >
+                Search
+              </button>
+              <a href="index.html" style="text-align: right;" class="button">Return to Homepage</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
