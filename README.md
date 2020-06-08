@@ -24,6 +24,7 @@ A user is warned about duplicate status codes, failed submissions etc. This syst
    ```
 2. Navigate to [searchstatusprocess.php](/searchstatusprocess.php#L39) (Line #39) and replace the database credentials in this file too. **Note:** The assignment did not permit for an additional `settings.php` file to consolidate the database details and `require_once('./settings.php');` where needed.
 3. Upload these files to your PHP environment or install a PHP Server extension in your IDE to serve the project locally.
+4. Simply post a new status. As the database table `posts` does not yet exist, the PHP script will firstly create this table, then proceed to insert the post (provided it meets all criteria). **Note:** *Status Code* follows the format `S0000` (an **S** followed by four digits).
 
 ## Screenshots
 
