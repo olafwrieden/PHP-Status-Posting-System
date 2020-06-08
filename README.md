@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Following an introduction to PHP, in this assignment I build a very simple PHP / HTML system where a user enters the details of their fictitious status update (including status code, message, date of publication, share, and permission type). This data is validated and stored into a MySQL database by the server-side PHP scripts.
+Following an introduction to PHP, in this assignment I built a very simple PHP / HTML system where a user enters the details of their fictitious status update (including status code, message, date of publication, share, and permission type). This data is validated and stored in a MySQL database by the server-side PHP scripts.
 
 A user is warned about duplicate status codes, failed submissions etc. This system uses [Skeleton CSS](http://getskeleton.com) - a simple and responsive boilerplate. Overall, this assignment received full (100/100) marks as it met all required criteria.
 
